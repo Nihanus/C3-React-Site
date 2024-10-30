@@ -11,9 +11,3 @@ public class BookReservation{
     public double PriceOfBook {get; set;} = 0;
     public string? TypeofBook {get; set;}
 }
-
-public class BookType{
-    [Key]
-    public int Id {get; set;}
-    public string? Name {get; set;}
-}

@@ -10,17 +10,6 @@ const string policy = "CorsPolicy";
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-/*builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: policy, builder =>
-    {
-        builder.AllowAnyOrigin()
-        .AllowAnyHeader()
-        .AllowAnyMethod();
-    });
-}
-);*/
 builder.Services.AddControllers();
 builder.Services.AddDbContext<BookContext>(opt => opt.UseInMemoryDatabase("Books"));
 builder.Services.AddScoped<IBookLook, BookLook>();

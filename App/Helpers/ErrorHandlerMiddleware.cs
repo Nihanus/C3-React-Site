@@ -3,6 +3,9 @@ namespace App.Helpers;
 using System.Net;
 using System.Text.Json;
 
+/// <summary>
+/// Decides what kind of response code to throw at the user
+/// </summary>
 public class ErrorHandlerMiddleware{
     private readonly RequestDelegate _next;
 

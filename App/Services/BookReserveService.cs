@@ -28,6 +28,12 @@ public class BookReserve : IBookReserve{
         _context = null;
     }
 
+    /// <summary>
+    /// Calculates the price of books reservations
+    /// </summary>
+    /// <param name="model">Model of book reservations</param>
+    /// <returns>Total price of books reservation</returns>
+    /// <exception cref="AppException">Errors when dates are in the wrong order or are too early</exception>
     public double GetPriceOfBook(BookReservation model){
         double price = 0;
         var type = model.TypeofBook;

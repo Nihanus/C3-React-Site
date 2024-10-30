@@ -2,6 +2,9 @@ namespace App.Helpers;
 
 using System.Globalization;
 
+/// <summary>
+/// Exception for know errors
+/// </summary>
 public class AppException : Exception{
     public AppException() : base() {}
 

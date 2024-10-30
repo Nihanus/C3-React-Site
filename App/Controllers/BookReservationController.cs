@@ -13,11 +13,20 @@ public class BookReservationController : ControllerBase{
         _bookReserve = bookReserve;
     }
 
+    /// <summary>
+    /// Get the list of book reservations that the user has made
+    /// </summary>
+    /// <returns>List of book reservations</returns>
     [HttpGet("reservations")]
     public IActionResult GetReservations(){
         return Ok(_bookReserve.GetBookReservations());
     }
 
+    /// <summary>
+    /// Writes to the db information of the books reservation
+    /// </summary>
+    /// <param name="model">Data model for book reservations</param>
+    /// <returns>HTTP 200</returns>
     [HttpPost]
     public IActionResult ReserveBook(BookReservation model){
         _bookReserve.ReserveBook(model);

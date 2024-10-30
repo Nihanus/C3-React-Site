@@ -28,16 +28,4 @@ public class DataSeeder{
             }
         };
     }
-    private List<BookType> GetBookTypes(){
-        return new List<BookType>{
-            new BookType{
-                Id = 1,
-                Name = "Book"
-            },
-            new BookType{
-                Id = 2,
-                Name = "Audiobook"
-            }
-        };
-    }
 }

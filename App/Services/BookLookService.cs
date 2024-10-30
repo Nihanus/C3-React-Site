@@ -11,26 +11,22 @@ public class BookLook : IBookLook{
     private BookContext _context;
     public BookLook(BookContext context){
         _context = context;
-        /*List<Book> books = new List<Book>{
-            new Book{
-                BookName = "Lord of the Rings",
-                ReleaseYear = 1957,
-                ImgPath = "https://cdn11.bigcommerce.com/s-gibnfyxosi/images/stencil/1920w/products/154740/156431/51eq24cRtRL__98083.1615576774.jpg?c=1"
-            },
-            new Book{
-                BookName = "The Hobbit",
-                ReleaseYear = 1937,
-                ImgPath = "https://images.thenile.io/r1000/9780007487288.jpg"
-            }
-        };
-        _context.Books.AddRange(books);
-        _context.SaveChanges();*/
     }
 
+    /// <summary>
+    /// Get all books in the db
+    /// </summary>
+    /// <returns>List of all the books in db</returns>
     public List<Book> GetBooks(){
         return _context.Books.ToList();
     }
 
+    /// <summary>
+    /// Get a specific book
+    /// </summary>
+    /// <param name="id">ID of the desired book</param>
+    /// <returns>The book with a matching id</returns>
+    /// <exception cref="KeyNotFoundException">If there ar no books with the matching id</exception>
     public Book GetBook(int id){
         var book = _context.Books.Find(id);
         if(book == null){
