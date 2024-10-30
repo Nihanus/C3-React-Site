@@ -1,0 +1,1 @@
+export const Path = "https://localhost:7085/";
