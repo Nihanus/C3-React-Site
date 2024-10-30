@@ -1,5 +1,7 @@
 # React .NET project
 
+Made by: Ignas Budzinskas
+
 ## Run instructions
 
 This project has been made in vs code using .net 7.0.
